@@ -2,6 +2,13 @@
   "name": "electron-template",
   "version": "0.1.0",
   "private": true,
+  "author": "aoki <ringohub@gmail.com>",
+  "description": "Electron sandbox",
+  "homepage": ".",
+  "main": "build/electron/main.js",
+  "repository": {
+    "url": "https://github.com/aoki/electron-template"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
@@ -10,12 +17,17 @@
     "@types/node": "^12.12.42",
     "@types/react": "^16.9.35",
     "@types/react-dom": "^16.9.8",
+    "electron-is-dev": "^1.2.0",
+    "electron-reload": "^1.5.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
     "typescript": "^3.7.5"
   },
   "scripts": {
+    "postinstall": "electron-builder install-app-deps",
+    "dev": "concurrently \"BROWSER=none npm start\" \"wait-on http://localhost:3000 && tsc -p electron -w\" \"wait-on http://localhost:3000 && tsc -p electron && electron .\"",
+    "app": "npm run build && tsc -p electron && electron-builder",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -40,8 +52,15 @@
     "concurrently": "^5.2.0",
     "electron": "^9.0.0",
     "electron-builder": "^22.7.0",
-    "electron-is-dev": "^1.2.0",
-    "electron-reload": "^1.5.0",
     "wait-on": "^5.0.0"
+  },
+  "build": {
+    "extends": null,
+    "files": [
+      "build/**/*"
+    ],
+    "directories": {
+      "buildResources": "assets"
+    }
   }
 }

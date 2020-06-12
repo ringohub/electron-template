@@ -23,7 +23,15 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
+    "styled-jsx": "^3.3.0",
     "typescript": "^3.7.5"
+  },
+  "devDependencies": {
+    "concurrently": "^5.2.0",
+    "electron": "^9.0.0",
+    "electron-builder": "^22.7.0",
+    "react-app-rewired": "^2.1.6",
+    "wait-on": "^5.0.0"
   },
   "scripts": {
     "postinstall": "electron-builder install-app-deps",
@@ -48,12 +56,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "concurrently": "^5.2.0",
-    "electron": "^9.0.0",
-    "electron-builder": "^22.7.0",
-    "wait-on": "^5.0.0"
   },
   "build": {
     "extends": null,

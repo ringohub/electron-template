@@ -5,10 +5,13 @@ import * as isDev from "electron-is-dev";
 let win: BrowserWindow | null = null;
 
 function createWindow() {
-  win = new BrowserWindow({ width: 800, height: 600 });
+  win = new BrowserWindow({ width: 800, height: 600, titleBarStyle: "hidden" });
 
   if (isDev) {
     win.loadURL("http://localhost:3000/index.html");
+
+    process.env.ELECTRON_DISABLE_SECURITY_WARNINGS = "1";
+    win.webContents.openDevTools();
   } else {
     // 'build/index.html'
     win.loadURL(`file://${__dirname}/../index.html`);

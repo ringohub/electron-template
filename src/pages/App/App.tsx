@@ -6,7 +6,6 @@ import {
   CssBaseline,
   ZeitProvider,
   Text,
-  Button,
   Toggle,
   Spacer,
 } from "@zeit-ui/react";

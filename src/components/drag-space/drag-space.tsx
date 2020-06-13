@@ -1,8 +1,13 @@
 import React from "react";
 
-const DragSpace = () => {
+interface Props {
+  location: string;
+}
+
+const DragSpace: React.FC<Props> = ({ location }) => {
   return (
     <div>
+      <p>{location}</p>
       <style jsx>{`
         div {
           -webkit-app-region: drag;

@@ -4,6 +4,7 @@ import React, { useContext } from "react";
 import ElectronLogo from "../../components/electron-logo/electron-logo";
 import ReactLogo from "../../components/react-logo/react-logo";
 import { ThemeContext } from "../../contexts/theme-context/theme-context";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const theme = useContext(ThemeContext);
@@ -27,6 +28,7 @@ const Home = () => {
         <Spacer inline x={0.35} />
         <Sun size={16} />
       </div>
+      <Link to="/editor">Editor</Link>
       <style jsx>{`
         .container {
           display: flex;

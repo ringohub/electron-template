@@ -6,7 +6,6 @@ const DragSpace: React.FC = () => {
   useEffect(() => {
     window.addEventListener("hashchange", () => {
       setHash(window.location.hash);
-      console.log(`hash = ${window.location.hash}`);
     });
   });
 

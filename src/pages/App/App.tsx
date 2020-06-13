@@ -1,21 +1,28 @@
 import React from "react";
-import reactLogo from "./react-logo.svg";
-import electronLogo from "./electron-logo.svg";
 import "./App.css";
-import DragSpace from "./components/drag-space/drag-space";
+import DragSpace from "../../components/drag-space/drag-space";
+import ElectronLogo from "../../components/electron-logo/electron-logo";
+import ReactLogo from "../../components/react-logo/react-logo";
 
 function App() {
   return (
     <div className="App">
       <DragSpace />
       <div className="contents">
-        <p>
-          <img src={reactLogo} className="App-logo" alt="logo" />
-          Hello React with Electron
-          <img src={electronLogo} className="App-logo" alt="electron-logo" />
-        </p>
+        <div className="hello">
+          <ReactLogo />
+          <p>Hello React with Electron</p>
+          <ElectronLogo />
+        </div>
       </div>
       <style jsx>{`
+        .hello p {
+          margin-right: 8px;
+        }
+        .hello {
+          display: flex;
+          align-items: center;
+        }
         .App {
           background-color: #282c34;
           display: flex;
@@ -28,6 +35,9 @@ function App() {
           align-items: center;
           justify-content: center;
           flex-grow: 1;
+        }
+        .inline {
+          display: inline;
         }
       `}</style>
     </div>

@@ -7,7 +7,7 @@ const ElectronLogo = () => {
       <img src={logo} alt="logo" />
       <style jsx>{`
         img {
-          height: 1.3rem;
+          height: 1.2rem;
         }
       `}</style>
     </>

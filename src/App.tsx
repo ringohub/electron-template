@@ -13,9 +13,9 @@ const App = () => {
     <ZeitProvider theme={{ type: theme.themeType }}>
       <CssBaseline />
       <ThemeContext.Provider value={theme}>
-        <div className="App">
+        <div className="app">
           <DragSpace />
-          <div className="contents">
+          <div className="body">
             <Router>
               <Switch>
                 <Route exact path="/editor" component={Editor} />
@@ -24,16 +24,13 @@ const App = () => {
             </Router>
           </div>
           <style jsx>{`
-            .App {
+            .app {
               display: flex;
               flex-direction: column;
               min-height: 100vh;
             }
-            .contents {
+            .body {
               display: flex;
-              flex-direction: column;
-              align-items: center;
-              justify-content: center;
               flex-grow: 1;
             }
           `}</style>

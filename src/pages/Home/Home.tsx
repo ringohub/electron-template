@@ -1,10 +1,10 @@
 import { Spacer, Text, Toggle, ZeitProvider } from "@zeit-ui/react";
 import { Moon, Sun } from "@zeit-ui/react-icons";
 import React, { useContext } from "react";
+import { Link } from "react-router-dom";
 import ElectronLogo from "../../components/electron-logo/electron-logo";
 import ReactLogo from "../../components/react-logo/react-logo";
 import { ThemeContext } from "../../contexts/theme-context/theme-context";
-import { Link } from "react-router-dom";
 
 const Home = () => {
   const theme = useContext(ThemeContext);

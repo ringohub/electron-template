@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 
 const DragSpace: React.FC = () => {
-  const [hash, setHash] = useState("/");
+  const [hash, setHash] = useState("");
 
   useEffect(() => {
     window.addEventListener("hashchange", () => {
       setHash(window.location.hash);
     });
-  });
+  }, []);
 
   return (
     <div>

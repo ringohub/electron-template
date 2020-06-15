@@ -40,7 +40,7 @@
   },
   "scripts": {
     "postinstall": "electron-builder install-app-deps",
-    "dev": "concurrently \"BROWSER=none npm start\" \"wait-on http://localhost:3000 && tsc -p electron -w\" \"wait-on http://localhost:3000 && tsc -p electron && electron .\"",
+    "dev": "concurrently \"BROWSER=none npm start\" \"wait-on http://localhost:3000 && tsc -p electron -w\" \"wait-on http://localhost:3000 && tsc -p electron && electron --disable-gpu .\"",
     "app": "npm run build && tsc -p electron && electron-builder",
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",

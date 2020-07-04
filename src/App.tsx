@@ -1,10 +1,10 @@
 import { CssBaseline, ZeitProvider } from "@zeit-ui/react";
 import React from "react";
+import { HashRouter as Router, Route, Switch } from "react-router-dom";
 import DragSpace from "./components/drag-space/drag-space";
 import { ThemeContext, useTheme } from "./contexts/theme-context/theme-context";
-import Home from "./pages/Home/Home";
-import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import Editor from "./pages/Editor/Editor";
+import Home from "./pages/Home/Home";
 
 const App = () => {
   const theme = useTheme();
